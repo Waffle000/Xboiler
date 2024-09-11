@@ -3,3 +3,11 @@
 /Packages
 xcuserdata/
 DerivedData/
+build/
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+*.xcodeproj/xcshareddata/
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata/

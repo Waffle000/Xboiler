@@ -82,9 +82,14 @@ folders:
 
 ## Usage
 
+Version
+```bash
+Xboiler --version
+```
+
 Simple for usage
 ```bash
-xboiler generate example.yaml
+Xboiler generate example.yaml
 ```
 
 ## Contributing

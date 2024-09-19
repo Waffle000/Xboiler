@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Platform-macOS-orange" alt="macOS badge" >
   <img src="https://img.shields.io/badge/SwiftUI-Generator-red" alt="Swift badge" tyle="float: right;" >
   <img src="https://img.shields.io/badge/Lisence-MIT-blue" alt="License Badge" tyle="float: right;">
-  <img src="https://img.shields.io/badge/Version-Betav0.1.0-green" alt="Version Badge" style="float: right;">
+  <img src="https://img.shields.io/badge/Version-Betav1.0.0-green" alt="Version Badge" style="float: right;">
 </p>
 
 # Xboiler

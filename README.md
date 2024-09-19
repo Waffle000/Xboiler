@@ -27,30 +27,57 @@ brew install xboiler
 ## Example YAML
 
 ```yaml
-outputFolder: MyAppProject
+outputFolder: MySwiftUIProject
 appName: MyApp
-mainView: ContentView
-bundleId: com.example.myapp
+mainView: HomeView
+bundleId: com.myapp.example
 platform: iOS
-deploymentTarget: 14.0
+deploymentTarget: 16.0
 device: universal
-views:
+files:
   - name: ContentView
+    type: view
     content: |
-        ZStack {
-            VStack {
-                Text("Welcome to My App")
-                Image("app_logo")
-                Button(action: {
-                    print("Button clicked")
-                }) {
-                    HStack {
-                        Text("Click")
-                        Text("Me")
-                    }
-                }
-            }
-        }
+      Text("Welcome to Content View")
+
+folders:
+  - folderName: Views
+    files:
+      - name: HomeView
+        type: view
+        content: |
+          Text("Welcome to Home View")
+
+  - folderName: ViewModels
+    files:
+      - name: HomeViewModel
+        type: class
+        inherits:
+          superclass: ObservableObject
+        content: |
+          @Published var title = "Home View"
+
+  - folderName: Managers
+    files:
+      - name: DataManager
+        type: class
+        inherits:
+          superclass: NSObject
+          protocols:
+            - DataManagerProtocol
+        content: |
+          func fetchData() {
+              print("Fetching data...")
+          }
+
+  - folderName: Protocol
+    files:
+       - name: DataManagerProtocol
+         type: protocol
+         content: |
+            func fetchData()
+
+
 ```
 
 ## Usage
@@ -67,7 +94,7 @@ Pull requests and issues are always welcome. Please open any issues and PRs for 
 ## Attributions
 This tool is powered by:
 
-- [XcodeProj](https://github.com/tuist/XcodeProj)
+- [XcodegenKit](https://github.com/yonaskolb/XcodeGen)
 - [PathKit](https://github.com/kylef/PathKit)
 - [Yams](https://github.com/jpsim/Yams)
 

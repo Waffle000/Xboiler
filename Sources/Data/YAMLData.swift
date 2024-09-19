@@ -15,5 +15,6 @@ struct YAMLData: Codable {
     let platform: String
     let deploymentTarget: String
     let device: String
-    let views: [View]
+    let files: [File]?
+    let folders: [Folder]?
 }

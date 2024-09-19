@@ -11,7 +11,7 @@ struct Generate: ParsableCommand {
     func run() throws {
         do {
             if let yamlData = parseYAML(filePath: yamlFilePath) {
-                ProjectGenerator().generateProject(from: yamlData)
+                BoilerplateGenerator().generateProject(from: yamlData)
             } else {
                 throw ValidationError("Failed read YAML")
             }

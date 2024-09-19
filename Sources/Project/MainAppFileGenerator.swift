@@ -27,7 +27,7 @@ class MainAppFileGenerator {
             try appCode.write(toFile: appFileName, atomically: true, encoding: .utf8)
             print("Generated file: \(appFileName)")
         } catch {
-            print("Gagal menulis file: \(appFileName)")
+            print("Failed write file: \(appFileName)")
         }
     }
 }

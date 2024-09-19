@@ -10,7 +10,7 @@ import Yams
 
 func parseYAML(filePath: String) -> YAMLData? {
     guard let yamlString = try? String(contentsOfFile: filePath, encoding: .utf8) else {
-        print("Gagal membaca file YAML.")
+        print("Failed read file YAML.")
         return nil
     }
     return try? YAMLDecoder().decode(YAMLData.self, from: yamlString)
